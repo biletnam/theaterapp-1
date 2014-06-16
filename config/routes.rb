@@ -1,9 +1,19 @@
 Rails.application.routes.draw do
+  get 'plays/index'
+
+  get 'plays/new'
+
+  get 'plays/show'
+
   get 'theaters/index'
 
   get 'theaters/show'
 
   get 'theaters/new'
+
+  root 'theater#index'
+
+  resources :plays
 
   resources :theaters do
     resources :plays

@@ -1,4 +1,11 @@
 <h1>Theater</h1>
 <h2><%= @theater.name %></h2>
 <h3><%= @theater.description %></h3>
+<h4><%= @theater.location %></h4>
+<h5>Plays</h5>
+  <% @theater.plays.each do |play| %>
+    <div class="play">
+      <%= play.title %>
+    </div>
+  <% end %>
 <%= link_to 'Back', theaters_path %>

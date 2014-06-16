@@ -1,0 +1,9 @@
+<h1>Plays</h1>
+<% @plays.each do |play| %>
+  <h2><%= play.name %></h2>
+  <h3><%= play.description %></h3>
+  <h4><%= play.schedule %></h4>
+  <h5><%= play.price %></h5>
+  
+  <%= link_to "Show play", theater_path(theater.id) %>
+  <% end %>
