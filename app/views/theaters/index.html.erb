@@ -1,0 +1,7 @@
+<h1>Theaters</h1>
+<% @theaters.each do |theater| %>
+  <h2><%= theater.name %></h2>
+  <h3><%= theater.description %></h3>
+  <h4><%= theater.location %></h4>
+  <%= link_to "Show theater", theater_path(theater.id) %>
+  <% end %>
